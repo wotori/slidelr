@@ -5,7 +5,7 @@ import subprocess
 app = fastapi.FastAPI()
 
 @app.get('/right')
-def left():
+def right_click():
     bash_command = "xdotool key Right"
     process = subprocess.Popen(bash_command.split(), stdout=subprocess.PIPE)
     output, errors = process.communicate()
